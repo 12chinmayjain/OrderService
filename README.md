@@ -1,0 +1,97 @@
+# Distributed Order Processing API
+
+A simple ASP.NET Core Web API that mimics a basic distributed order processing system with in-memory messaging.
+
+---
+
+##  Project Setup Instructions
+
+###  Prerequisites
+- [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download)
+- Optional: [SQLite Browser](https://sqlitebrowser.org/) 
+- Swagger , Postman (for testing)
+
+### Setup Steps
+
+1. **Clone the Repository**
+   git clone https://github.com/yourusername/order-processing-api.git
+   cd order-processing-api
+
+2. **Restore Dependencies**
+   dotnet restore
+
+3. **Run Database Migrations**
+   dotnet ef database update
+
+
+##  API Endpoints
+
+### POST `/order`
+Create a new order.
+
+#### Request Body:
+```json
+{
+  "customerName": "Alice",
+  "product": "Keyboard",
+  "quantity": 2
+}
+```
+ 
+ #### Response Body :
+ ```json
+{
+  "customerName": "Alice",
+  "product": "Keyboard",
+  "quantity": 2
+} 
+```
+
+### GET '/order/{id}'
+Get order details after passing order-id
+```
+Example Request:
+GET https://localhost:5001/order/1
+
+Response (200 OK):
+{
+  "id": 1,
+  "customerName": "Alice",
+  "product": "Keyboard",
+  "quantity": 2,
+  "createdAt": "2025-05-12T10:45:00Z"
+}
+```
+
+##  What Each Module Does
+
+### `/Controllers/OrdersController.cs`
+- **Handles the HTTP** endpoints for creating and fetching orders.
+- **Logs** actions and publishes order events to the queue.
+
+### `/Data/OrderContext.cs`
+- **Entity Framework** `DbContext` class that manages the SQLite database connection and schema.
+- Defines the **`Orders`** table structure and manages database interactions.
+
+### `/Models/Order.cs`
+- Represents the **Order** entity, containing fields like `Id`, `CustomerName`, `Product`, `Quantity`, etc.
+- This model is used to **store** and **retrieve** data from the database.
+
+### `/Queue/IMessageQueue.cs` & `/Queue/MessageQueue.cs`
+- Defines and implements a **simple in-memory message queue** using `Channel<string>`.
+- Simulates event publishing  for **order confirmation messages**.
+
+## [Order API Screenshot]
+please check
+Post : 
+OrderService\Images\post.png
+OrderService\Images\post1.png
+
+Get  :
+OrderService\Images\Get1.png
+
+MessageQueue :
+OrderService\Images\MQ1.png
+
+DataBase:
+OrderService\Images\db4.png
