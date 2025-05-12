@@ -84,11 +84,11 @@ Response (200 OK):
 ## [Order API Screenshot]
 please check
 Post : 
-OrderService\Images\post.png
+
 OrderService\Images\post1.png
 
 Get  :
-OrderService\Images\Get1.png
+![image_alt](https://github.com/12chinmayjain/OrderService/blob/69a99152c258246cc654c8ad66801216c0881948/Images/Get1.PNG)
 
 MessageQueue :
 OrderService\Images\MQ1.png
