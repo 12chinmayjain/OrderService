@@ -84,14 +84,15 @@ Response (200 OK):
 ## [Order API Screenshot]
 please check
 Post : 
+![image_alt](https://github.com/12chinmayjain/OrderService/blob/a03dfd916dce1ded3204c1dfce4aa078c6b877e4/Images/post.PNG)
 
-OrderService\Images\post1.png
+![image_alt](https://github.com/12chinmayjain/OrderService/blob/a03dfd916dce1ded3204c1dfce4aa078c6b877e4/Images/post1.PNG)
 
 Get  :
 ![image_alt](https://github.com/12chinmayjain/OrderService/blob/69a99152c258246cc654c8ad66801216c0881948/Images/Get1.PNG)
 
 MessageQueue :
-OrderService\Images\MQ1.png
+![image_alt](https://github.com/12chinmayjain/OrderService/blob/a03dfd916dce1ded3204c1dfce4aa078c6b877e4/Images/MQ1.PNG)
 
 DataBase:
-OrderService\Images\db4.png
+![image_alt](https://github.com/12chinmayjain/OrderService/blob/a03dfd916dce1ded3204c1dfce4aa078c6b877e4/Images/db4.PNG)
