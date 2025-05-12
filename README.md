@@ -32,18 +32,19 @@ Create a new order.
 #### Request Body:
 ```json
 {
-  "customerName": "Alice",
   "product": "Keyboard",
-  "quantity": 2
+  "quantity": 2,
+  "orderDate": "2025-05-12T10:45:00Z"
 }
 ```
  
  #### Response Body :
  ```json
 {
-  "customerName": "Alice",
+  "id": 2,
   "product": "Keyboard",
-  "quantity": 2
+  "quantity": 2,
+  "orderDate": "2025-05-12T10:45:00Z"
 } 
 ```
 
@@ -55,11 +56,10 @@ GET https://localhost:5001/order/1
 
 Response (200 OK):
 {
-  "id": 1,
-  "customerName": "Alice",
+  "id": 2,
   "product": "Keyboard",
   "quantity": 2,
-  "createdAt": "2025-05-12T10:45:00Z"
+  "orderDate": "2025-05-12T10:45:00Z"
 }
 ```
 
